@@ -1,0 +1,57 @@
+.message {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin: 8px 0; /* Vertical margin between messages */
+    padding: 8px 12px; /* Reduced padding inside messages */
+    border-radius: 20px; /* Rounded corners */
+    max-width: 80%; /* Limit the maximum width to 80% of the container */
+    font-size: 0.1rem; /* Slightly reduced font size for messages */
+    position: relative; /* Positioning for the timestamp */
+    word-wrap: break-word; /* Wrap long words to the next line */
+    overflow-wrap: break-word; /* Break long words to prevent overflow */
+    background-color: #f1f1f1; /* Default background for messages */
+}
+
+/* User (You) messages */
+.message.you {
+    background-color: #dcf8c6; /* Light green for sent messages */
+    color: #000;
+    align-self: flex-end; /* Align user messages to the end */
+}
+
+/* Received messages */
+.message.gemini {
+    background-color: #ffffff; /* White for received messages */
+    color: #000;
+    align-self: flex-start; /* Align Gemini messages to the start */
+}
+
+/* Avatar styles */
+.avatar {
+    width: 30px; /* Set width for avatar */
+    height: 30px; /* Set height for avatar */
+    border-radius: 50%; /* Make the avatar round */
+    margin-right: 8px; /* Space between avatar and text */
+}
+
+/* Text container styles */
+.text-container {
+    display: flex;
+    flex-direction: column; /* Stack text and timestamp */
+}
+
+/* Message timestamp */
+.timestamp {
+    font-size: 0.7rem; /* Reduced font size for timestamp */
+    color: #aaa;
+    margin-top: 3px; /* Space above the timestamp */
+}
+
+.message-header {
+    display: flex;
+    align-items: center; /* Align icon and text */
+}
+
+.message-content {
+    flex: 1; /* Allow the text to take the remaining space */
+}

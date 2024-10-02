@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Message = ({ text, sender }) => {
+const Message = ({ text, sender, timestamp }) => {
   return (
-    <div className={`message ${sender === 'You' ? 'sent' : 'received'}`}>
-      <span className="sender">{sender}: </span>
-      <span className="text">{text}</span>
+    <div className={`message ${sender === 'You' ? 'you' : 'gemini'}`}>
+      <div className="message-content">
+        <span className="text">{text}</span>
+        <span className="timestamp">{timestamp}</span>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,106 @@
+/* ChatBox.css */
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
+    width: 100%;
+    height: calc(100vh - 60px); /* Full height minus navbar height */
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.messages {
+    flex-grow: 1; /* Allow messages to fill available space */
+    overflow-y: auto; /* Enable scrolling for messages */
+    margin-bottom: 10px; /* Space below messages */
+    padding: 10px; /* Padding inside messages container */
+    background-color: #ffffff; /* Background for messages */
+    border-radius: 8px; /* Rounded corners for messages container */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+/* Individual message styles */
+.message {
+    margin: 8px 0; /* Vertical margin between messages */
+    padding: 10px; /* Padding inside messages */
+    border-radius: 20px; /* Rounded corners */
+    width: auto;  
+    max-width: fit-content;
+    font-size: 1rem; /* Font size for messages */
+    position: relative; /* Positioning for the timestamp */
+}
+
+/* User (You) messages */
+.message.you {
+    background-color: #dcf8c6; /* Light green for sent messages */
+    color: #000;
+    align-self: flex-end; /* Align user messages to the end (right side) */
+    margin-left: auto; /* Push user messages to the right */
+}
+
+/* Received messages */
+.message.gemini {
+    background-color: #f1f1f1; /* Light gray for received messages */
+    color: #000;
+    align-self: flex-start; /* Align Gemini messages to the start (left side) */
+    margin-right: auto; /* Push bot messages to the left */
+}
+
+/* Message timestamp */
+.timestamp {
+    font-size: 0.8rem;
+    color: #aaa;
+    position: absolute; /* Positioning to place it below the message */
+    bottom: -18px; /* Adjust as necessary */
+    right: 10px; /* Position it towards the right */
+}
+
+/* Chat input box */
+.input-form {
+    display: flex; /* Flexbox for input and button */
+    width: 100%; /* Full width for input */
+}
+
+.input-field {
+    flex-grow: 1; /* Grow input to take available space */
+    padding: 12px; /* Padding inside input */
+    font-size: 1rem; /* Font size for input */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 20px; /* Rounded corners for input */
+    margin-right: 10px; /* Space between input and button */
+}
+
+.send-button {
+    background-color: #25d366; /* WhatsApp green */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded corners */
+    padding: 12px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Button hover effect */
+.send-button:hover {
+    background-color: #128c7e; /* Darker green on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    .chatbox {
+        padding: 10px; /* Adjust padding for mobile view */
+    }
+
+    .input-field {
+        padding: 8px; /* Adjust input field padding */
+        font-size: 0.9rem; /* Slightly smaller font size for mobile */
+    }
+
+    .send-button {
+        padding: 10px 15px; /* Adjust button padding */
+    }
+}
