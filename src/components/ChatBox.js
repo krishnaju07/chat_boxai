@@ -7,7 +7,7 @@ import './ChatBox.css'; // Import the CSS file for styling
 const ChatBox = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
-  const apiKey = process.env.REACT_APP_GEMINI_AI_API_KEY; // Use your API key
+  const apiKey = "AIzaSyBUY_PDKM3Vbl6R-NYbbO_23pkjncrXc6E"; // Use your API key
 
   const sendMessage = async (message) => {
     const userMessage = { text: message, sender: 'You' };
