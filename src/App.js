@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div className={`app ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
       <nav className="navbar">
-      <h4>Chat Application check</h4>
+      <h4>Chat Application</h4>
         <div className="navbar-icons">
           {isDarkMode ? (
             <FaSun className="dark-mode-icon" onClick={toggleDarkMode} />
